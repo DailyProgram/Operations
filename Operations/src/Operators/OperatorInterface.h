@@ -8,14 +8,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #include "CulculationDTO.h"
+#include "DataResult.h"
+#include "TreatmentDataBinaryOperator.h"
+#include "CheckerDataOperator.h"
 
 class OperatorInterface {
 
 public:
 
-    virtual float calculate(CulculationDTO &data) = 0;
+    virtual DataResult *calculate(CulculationDTO &data) = 0;
+
 };
 
 

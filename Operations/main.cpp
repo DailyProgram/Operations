@@ -4,6 +4,7 @@
 #include "src/Operators/CulculationDTO.h"
 #include "src/CollectionOperations.h"
 #include "src/Operators/OperatorInterface.h"
+#include "src/Operators/DataResult.h"
 
 #include "src/Operators/Quadratic.h"
 #include "src/Operators/Summ.h"
@@ -14,7 +15,7 @@
 using namespace std;
 
 int main() {
-    string input = "/home/pda/CLionProjects/PDA/Operations/test.txt";
+    string input = "/home/pda/CLionProjects/Operations/Operations//test.txt";
     cout << "Введите путь файла" << endl;
     // cin >> input;
     Reader reader;

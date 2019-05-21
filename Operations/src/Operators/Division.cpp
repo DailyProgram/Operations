@@ -4,34 +4,24 @@
 
 #include "Division.h"
 
-float Division::calculate(CulculationDTO &data) {
-  /*  int a, b;
-    char *buf;
-    int i = 0;
+DataResult *Division::calculate(CulculationDTO &data) {
 
-    while (strdata[i] != '/') {
-        i++;
-    }
+    CheckerDataOperator checkerDataOperator;
+    bool flag = checkerDataOperator.check_binary(data.get_exmaple(), '+');
 
-    buf = new char[i];
-    memcpy(buf, &strdata[0], i);
-    buf[i] = '\0';
+    if (flag == false) { return NULL; }
 
-    a = atoi(buf);
+    TreatmentDataBinaryOperator treatmentDataBinaryOperator;
 
-    int j = i;
-    while (strdata[j] != '\0') {
-        j++;
-    }
+    float *total = new float;
+    float a, b;
 
-    j = j - i;
-    delete[] buf;
-    buf = new char[j];
-    memcpy(buf, &strdata[i + 1], j);
-    buf[j] = '\0';
+    a = treatmentDataBinaryOperator.get_first_arg(data.get_exmaple(), '+');
+    b = treatmentDataBinaryOperator.get_second_arg(data.get_exmaple(), '+');
 
-    b = atoi(buf);
-    delete[] buf;
+    total[0] = a / b;
 
-    return a / b;*/
+    DataResult *result = new DataResult(1, total);
+
+    return result;
 }

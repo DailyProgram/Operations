@@ -11,7 +11,7 @@ class Quadratic : public OperatorInterface{
 
 public:
 
-    float calculate(CulculationDTO &data);
+    DataResult *calculate(CulculationDTO &data);
 };
 
 

@@ -11,7 +11,7 @@ class Summ : public OperatorInterface {
 
 public:
 
-    float calculate(CulculationDTO &data) override;
+    DataResult *calculate(CulculationDTO &data) override;
 };
 
 
