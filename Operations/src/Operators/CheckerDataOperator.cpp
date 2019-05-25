@@ -14,7 +14,7 @@ bool CheckerDataOperator::check_binary(char *data, char delim) {
             return false;
         }
     }
-    if (flag == false) { return false; } else return true;
+    return flag;
 }
 
 bool CheckerDataOperator::check_polinom(char *data, int power) {
